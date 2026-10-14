@@ -1,0 +1,26 @@
+{
+  "tools": [
+    {
+      "name": "github.create_issue",
+      "description": "Create a GitHub issue in a repository.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "repo": {"type": "string", "description": "owner/name"},
+          "title": {"type": "string", "description": "Issue title"},
+          "body": {"type": "string", "description": "Markdown body"}
+        },
+        "required": ["repo", "title"]
+      }
+    },
+    {
+      "name": "read_file",
+      "description": "Read a UTF-8 text file from the workspace.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {"path": {"type": "string", "description": "Relative path"}},
+        "required": ["path"]
+      }
+    }
+  ]
+}

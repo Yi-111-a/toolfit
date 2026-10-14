@@ -1,0 +1,32 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_weather",
+      "description": "Get the current weather for a city.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {"type": "string", "description": "City name, e.g. Shanghai"},
+          "unit": {"type": "string", "enum": ["celsius", "fahrenheit"], "default": "kelvin"}
+        },
+        "required": ["city", "country"]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "search.docs",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {"type": "string", "description": "Search query", "minLength": 1},
+          "tags": {"type": "array", "description": "Filter tags"},
+          "filters": {"$ref": "#/$defs/Filters"}
+        },
+        "required": ["query"]
+      }
+    }
+  }
+]

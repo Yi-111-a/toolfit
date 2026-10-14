@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1221" height="352" viewBox="0 0 1221 352">
+<rect width="1221" height="352" rx="10" fill="#1e1e2e"/>
+<circle cx="22" cy="20" r="6" fill="#f38ba8"/><circle cx="42" cy="20" r="6" fill="#f9e2af"/><circle cx="62" cy="20" r="6" fill="#a6e3a1"/>
+<g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13">
+<text x="18" y="56" fill="#a6e3a1">$ toolfit check -p openai-strict examples/openai_tools.json</text>
+<text x="18" y="78" fill="#cdd6f4"><tspan fill="#f38ba8" font-weight="bold">error</tspan> TF005 [get_weather #] &quot;required&quot; lists &quot;country&quot; which is not in &quot;properties&quot;</text>
+<text x="18" y="100" fill="#cdd6f4"><tspan fill="#f9e2af" font-weight="bold">warning</tspan> TF012 [get_weather #/properties/unit] default &quot;kelvin&quot; is not one of the enum values</text>
+<text x="18" y="122" fill="#cdd6f4"><tspan fill="#f38ba8" font-weight="bold">error</tspan> TF041 [get_weather #] strict mode: object needs &quot;additionalProperties&quot;: false</text>
+<text x="18" y="144" fill="#cdd6f4"><tspan fill="#f38ba8" font-weight="bold">error</tspan> TF042 [get_weather #] strict mode: every property must be required (use a [&quot;type&quot;, &quot;null&quot;] union for optional ones); not required: unit</text>
+<text x="18" y="166" fill="#cdd6f4"><tspan fill="#f9e2af" font-weight="bold">warning</tspan> TF003 [search.docs] tool has no description; models pick tools mostly by description</text>
+<text x="18" y="188" fill="#cdd6f4"><tspan fill="#f9e2af" font-weight="bold">warning</tspan> TF009 [search.docs #/properties/tags] array has no &quot;items&quot;; several providers reject or mis-handle this</text>
+<text x="18" y="210" fill="#cdd6f4"><tspan fill="#f38ba8" font-weight="bold">error</tspan> TF006 [search.docs #/properties/filters] unresolved $ref &quot;#/$defs/Filters&quot;</text>
+<text x="18" y="232" fill="#cdd6f4"><tspan fill="#f38ba8" font-weight="bold">error</tspan> TF020 [search.docs] name &quot;search.docs&quot; must match ^[a-zA-Z0-9_-]{1,64}$</text>
+<text x="18" y="254" fill="#cdd6f4"><tspan fill="#f38ba8" font-weight="bold">error</tspan> TF041 [search.docs #] strict mode: object needs &quot;additionalProperties&quot;: false</text>
+<text x="18" y="276" fill="#cdd6f4"><tspan fill="#f38ba8" font-weight="bold">error</tspan> TF042 [search.docs #] strict mode: every property must be required (use a [&quot;type&quot;, &quot;null&quot;] union for optional ones); not required: tags, filters</text>
+<text x="18" y="298" fill="#cdd6f4"><tspan fill="#f9e2af" font-weight="bold">warning</tspan> TF045 [search.docs #/properties/query] strict mode: &quot;minLength&quot; is not in OpenAI&#x27;s supported keyword list; it may be rejected or ignored</text>
+<text x="18" y="320" fill="#cdd6f4" font-weight="bold">2 tool(s), ~139 tokens of definitions: 7 error(s), 4 warning(s), 1 info (use --info to show)</text>
+</g></svg>

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toolfit"
+version = "0.1.0"
+description = "Lint LLM tool / function-calling schemas (OpenAI strict, Anthropic, DeepSeek, MCP) before the API rejects them"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Yi-111-a" }]
+requires-python = ">=3.9"
+keywords = ["llm", "function-calling", "tool-use", "json-schema", "openai", "anthropic", "deepseek", "mcp", "lint"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.urls]
+Homepage = "https://github.com/Yi-111-a/toolfit"
+Issues = "https://github.com/Yi-111-a/toolfit/issues"
+
+[project.scripts]
+toolfit = "toolfit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
